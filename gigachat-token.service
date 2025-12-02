@@ -1,0 +1,14 @@
+[Unit]
+Description=gigachat-token
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=evm
+WorkingDirectory=/home/evm/gigachat-token
+ExecStart=/home/evm/gigachat-token/.venv/bin/python /home/evm/gigachat-token/main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
