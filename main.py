@@ -4,6 +4,7 @@ import uuid
 from contextlib import asynccontextmanager
 from typing import Annotated
 
+import logfire
 import requests
 import uvicorn
 
@@ -59,6 +60,9 @@ app = FastAPI(
         "email": "eimeredelin@sberbank.ru"
     },
 )
+
+logfire.configure()
+logfire.instrument_fastapi(app)
 
 
 @app.get("/")

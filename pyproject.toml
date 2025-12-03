@@ -8,6 +8,7 @@ dependencies = [
     "aiobotocore>=2.25.2",
     "environs>=14.5.0",
     "fastapi[standard]>=0.122.0",
+    "logfire[fastapi]>=4.15.1",
     "psycopg[binary,pool]>=3.2.13",
     "python-dateutil>=2.9.0.post0",
     "requests>=2.32.5",
